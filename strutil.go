@@ -9,6 +9,15 @@ func StringInSlice(str string, slice []string) bool {
 	return false
 }
 
+func StringIndex(str string, slice []string) int {
+	for i, s := range slice {
+		if s == str {
+			return i
+		}
+	}
+	return -1
+}
+
 func Uniq(slice []string) (uslice []string) {
 	for _, s := range slice {
 		if !StringInSlice(s, uslice) {
